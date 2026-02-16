@@ -5,7 +5,7 @@ type LogoMarkProps = {
   className?: string;
 };
 
-export function LogoMark({ size = 58, className = "" }: LogoMarkProps) {
+export function LogoMark({ size = 68, className = "" }: LogoMarkProps) {
   return (
     <img
       src="/logo-square.png"

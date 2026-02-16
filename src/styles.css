@@ -90,8 +90,8 @@ p{ color:var(--muted); line-height:1.55; margin:0; }
 
 .brand{ display:flex; gap:12px; align-items:center; min-width:0; }
 .brand-mark{
-  width: clamp(46px, 4.4vw, 58px);
-  height: clamp(46px, 4.4vw, 58px);
+  width: clamp(54px, 5vw, 68px);
+  height: clamp(54px, 5vw, 68px);
   border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255,255,255,.18);
@@ -149,8 +149,8 @@ p{ color:var(--muted); line-height:1.55; margin:0; }
   .nav{ display:none; }
   .mobile-fab{ display:block; }
   .brand-mark{
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 12px;
   }
   .brand .name{ font-size: 14px; }
