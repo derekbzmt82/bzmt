@@ -1,25 +1,21 @@
-import React from "react";
+import logoImage from "@/assets/logo.png";
 
-type LogoMarkProps = {
-  className?: string;
-};
+const Logo = ({ className = "", size = "default" }: { className?: string; size?: "small" | "default" | "large" }) => {
+  const sizes = {
+    small: "w-10",
+    default: "w-14",
+    large: "w-20",
+  };
 
-export function LogoMark({ className = "" }: LogoMarkProps) {
   return (
     <img
-      src="/logo-square.png"
-      className={`brand-mark ${className}`.trim()}
-      alt="BZMT logo"
+      src={logoImage}
+      alt="BodyZen Muscular Therapy logo"
+      className={`h-auto object-contain ${sizes[size]} ${className}`.trim()}
       loading="eager"
       decoding="async"
     />
   );
-}
+};
 
-export default function Logo() {
-  return (
-    <div className="brand" aria-label="BodyZen Muscular Therapy">
-      <LogoMark />
-    </div>
-  );
-}
+export default Logo;

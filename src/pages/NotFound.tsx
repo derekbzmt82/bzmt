@@ -1,20 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Seo from "../components/Seo";
-import { localBusinessJsonLd } from "../seo";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
-export default function NotFound() {
+const NotFound = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+  }, [location.pathname]);
+
   return (
-    <div className="section">
-      <div className="container">
-        <Seo title="Page Not Found" path="/404" description="Page not found." jsonLd={[localBusinessJsonLd()]} />
-        <div className="card" style={{ padding: 22 }}>
-          <h1>404</h1>
-          <p style={{ marginTop: 10 }}>This page doesn’t exist. Like free parking in Cambridge.</p>
-          <div style={{ height: 14 }} />
-          <Link className="btn primary" to="/">Back home</Link>
-        </div>
+    <div className="flex min-h-screen items-center justify-center bg-muted">
+      <div className="text-center">
+        <h1 className="mb-4 text-4xl font-bold">404</h1>
+        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
+        <a href="/" className="text-primary underline hover:text-primary/90">
+          Return to Home
+        </a>
       </div>
     </div>
   );
-}
+};
+
+export default NotFound;

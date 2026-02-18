@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 170 20% 97%;
+    --foreground: 200 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 10%;
+
+    --primary: 175 84% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 82 77% 45%;
+    --secondary-foreground: 200 25% 10%;
+
+    --muted: 170 15% 92%;
+    --muted-foreground: 200 10% 45%;
+
+    --accent: 12 85% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 170 15% 88%;
+    --input: 170 15% 88%;
+    --ring: 175 84% 32%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 175 84% 32%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 170 15% 92%;
+    --sidebar-accent-foreground: 200 25% 10%;
+    --sidebar-border: 170 15% 88%;
+    --sidebar-ring: 175 84% 32%;
+
+    /* Custom tokens */
+    --teal: 175 84% 32%;
+    --teal-light: 175 60% 90%;
+    --lime: 82 77% 45%;
+    --lime-light: 82 50% 90%;
+    --coral: 12 85% 62%;
+    --coral-light: 12 60% 92%;
+    --dark: 200 25% 10%;
+    --dark-lighter: 200 15% 18%;
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(200 25% 8%) 0%, hsl(200 20% 14%) 50%, hsl(175 40% 18%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(175 84% 32%) 0%, hsl(175 70% 42%) 100%);
+    --gradient-lime: linear-gradient(135deg, hsl(82 77% 45%) 0%, hsl(90 70% 50%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(12 85% 62%) 0%, hsl(20 80% 58%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(170 15% 97%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(175 84% 32% / 0.12);
+    --shadow-card: 0 8px 30px -8px hsl(200 25% 10% / 0.1);
+    --shadow-cta: 0 6px 24px -4px hsl(175 84% 32% / 0.35);
+    --shadow-coral: 0 6px 24px -4px hsl(12 85% 62% / 0.35);
+  }
+
+  .dark {
+    --background: 200 25% 8%;
+    --foreground: 170 20% 95%;
+    --card: 200 20% 12%;
+    --card-foreground: 170 20% 95%;
+    --popover: 200 20% 12%;
+    --popover-foreground: 170 20% 95%;
+    --primary: 175 70% 42%;
+    --primary-foreground: 200 25% 8%;
+    --secondary: 82 60% 50%;
+    --secondary-foreground: 200 25% 8%;
+    --muted: 200 15% 18%;
+    --muted-foreground: 170 10% 60%;
+    --accent: 12 80% 58%;
+    --accent-foreground: 0 0% 100%;
+    --border: 200 15% 22%;
+    --input: 200 15% 22%;
+    --ring: 175 70% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient-teal {
+    background: var(--gradient-teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-lime {
+    background: var(--gradient-lime);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-cta {
+    box-shadow: var(--shadow-cta);
+  }
+
+  .shadow-coral {
+    box-shadow: var(--shadow-coral);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+}
