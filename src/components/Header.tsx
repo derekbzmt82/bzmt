@@ -18,10 +18,13 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className="container-wide flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-        <Link to="/" aria-label="Home">
-          <Logo size="default" />
+    <header className="sticky top-0 z-50 overflow-visible border-b border-border bg-card/90 backdrop-blur-md">
+      <div className="container-wide flex h-20 items-center justify-between px-4 sm:h-24 sm:px-6 lg:px-8">
+        <Link to="/" aria-label="Home" className="relative shrink-0">
+          <Logo
+            size="header"
+            className="mt-1 translate-y-1 drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] sm:translate-y-2"
+          />
         </Link>
 
         {/* Desktop nav */}
