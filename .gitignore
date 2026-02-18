@@ -1,2 +1,4 @@
 src/.DS_Store
 derek_key.pub
+node_modules/
+.playwright-cli/

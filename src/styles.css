@@ -90,22 +90,12 @@ p{ color:var(--muted); line-height:1.55; margin:0; }
 
 .brand{ display:flex; gap:12px; align-items:center; min-width:0; }
 .brand-mark{
-  width: clamp(54px, 5vw, 68px);
-  height: clamp(54px, 5vw, 68px);
-  border-radius: 14px;
-  object-fit: cover;
-  border: 1px solid rgba(255,255,255,.18);
-  box-shadow: 0 8px 20px rgba(0,0,0,.30);
+  width: clamp(92px, 9vw, 130px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.32));
   flex-shrink: 0;
 }
-.brand-copy{ min-width:0; }
-.brand .name{
-  font-weight:900;
-  letter-spacing:-.02em;
-  font-size: clamp(14px, 1.4vw, 18px);
-  white-space:nowrap;
-}
-.brand .tag{ font-size:12px; color:var(--muted); margin-top:2px; white-space:nowrap; }
 
 .hero{ padding:64px 0 26px; }
 .hero-wrap{ display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; align-items:stretch; }
@@ -143,15 +133,11 @@ p{ color:var(--muted); line-height:1.55; margin:0; }
 @media (max-width: 880px){
   .hero-wrap{ grid-template-columns: 1fr; }
   .footer-grid{ grid-template-columns: 1fr; }
-  .brand .tag{ display:none; }
 }
 @media (max-width: 720px){
   .nav{ display:none; }
   .mobile-fab{ display:block; }
   .brand-mark{
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
+    width: 98px;
   }
-  .brand .name{ font-size: 14px; }
 }
