@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import Seo from "@/components/Seo";
 import { ArrowRight, Zap, Target, Shield, Hand, Droplets, Brain, Waves } from "lucide-react";
 
 const services = [
@@ -50,6 +51,11 @@ const services = [
 
 const Services = () => (
   <>
+    <Seo
+      title="Services | BZMT"
+      description="Explore BZMT services in Cambridge, MA: sports massage, deep tissue, myofascial release, cupping, and neuromuscular therapy."
+      path="/services"
+    />
     <section className="section-padding bg-hero-gradient">
       <div className="container-wide text-center">
         <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 border border-primary/30">

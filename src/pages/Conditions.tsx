@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import Seo from "@/components/Seo";
 import { ArrowRight } from "lucide-react";
 
 const conditions = [
@@ -22,6 +23,11 @@ const conditions = [
 
 const Conditions = () => (
   <>
+    <Seo
+      title="Conditions We Help | BZMT"
+      description="See the conditions BZMT helps treat in Cambridge, MA, from sports injuries and sciatica to chronic muscular pain."
+      path="/conditions"
+    />
     <section className="section-padding bg-hero-gradient">
       <div className="container-wide text-center">
         <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 border border-primary/30">

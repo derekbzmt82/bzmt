@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { Calendar, Phone, ArrowRight } from "lucide-react";
 
 const Book = () => (
   <>
+    <Seo
+      title="Book a Session | BZMT"
+      description="Book your sports massage or muscular therapy session with BZMT in Cambridge, MA."
+      path="/book"
+    />
     <section className="section-padding bg-hero-gradient">
       <div className="container-wide text-center">
         <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 border border-primary/30">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { ArrowRight, Award, BookOpen, Users, Heart } from "lucide-react";
 
 const highlights = [
@@ -11,6 +12,11 @@ const highlights = [
 
 const About = () => (
   <>
+    <Seo
+      title="About Derek C. Campbell | BZMT"
+      description="Meet Derek C. Campbell, founder of BodyZen Muscular Therapy in Cambridge, MA."
+      path="/about"
+    />
     <section className="section-padding bg-hero-gradient">
       <div className="container-wide text-center">
         <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 border border-primary/30">

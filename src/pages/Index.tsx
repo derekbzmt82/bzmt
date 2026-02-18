@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Star, ArrowRight, Shield, Zap, Target, Users, ChevronDown, ChevronUp } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import Seo from "@/components/Seo";
 import heroBg from "@/assets/hero-bg.jpg";
 import landingAthletes from "@/assets/landing-athletes.jpg";
 import landingPainRelief from "@/assets/landing-pain-relief.jpg";
@@ -62,6 +63,11 @@ const Index = () => {
 
   return (
     <>
+      <Seo
+        title="BZMT | Sports Massage in Cambridge, MA"
+        description="Evidence-based sports massage and muscular therapy in Cambridge, MA for recovery, mobility, and pain relief."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0">

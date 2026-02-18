@@ -1,11 +1,12 @@
 import { useLocation } from "react-router-dom";
+import { SITE_URL, absoluteUrl } from "@/lib/seo";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MassageTherapy",
   name: "BodyZen Muscular Therapy",
-  image: "https://bodyzenmuscular.com/og-image.jpg",
-  url: "https://bodyzenmuscular.com",
+  image: absoluteUrl("/logo-square.png"),
+  url: SITE_URL,
   telephone: "+16179067557",
   address: {
     "@type": "PostalAddress",

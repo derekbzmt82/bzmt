@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { ArrowRight, ClipboardList, MessageSquare, ShieldCheck, CalendarCheck } from "lucide-react";
 
 const steps = [
@@ -27,6 +28,11 @@ const steps = [
 
 const FirstVisit = () => (
   <>
+    <Seo
+      title="First Visit | BZMT"
+      description="Learn what to expect on your first BZMT appointment in Cambridge, MA."
+      path="/first-visit"
+    />
     <section className="section-padding bg-hero-gradient">
       <div className="container-wide text-center">
         <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4 border border-primary/30">
