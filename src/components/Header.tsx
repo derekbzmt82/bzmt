@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -15,15 +16,36 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 24);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 overflow-visible border-b border-border bg-card/90 backdrop-blur-md">
-      <div className="container-wide flex h-20 items-center justify-between px-4 sm:h-24 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 overflow-visible border-b border-border bg-card/90 backdrop-blur-md transition-all duration-300">
+      <div
+        className={cn(
+          "container-wide flex items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-300",
+          isScrolled ? "h-[4.5rem] sm:h-[5rem]" : "h-[5.25rem] sm:h-[5.75rem]",
+        )}
+      >
         <Link to="/" aria-label="Home" className="relative shrink-0">
           <Logo
             size="header"
-            className="mt-1 translate-y-1 drop-shadow-[0_10px_20px_rgba(0,0,0,0.28)] sm:translate-y-2"
+            className={cn(
+              "mt-2 select-none pointer-events-none origin-top-left drop-shadow-[0_10px_20px_rgba(0,0,0,0.30)] transition-all duration-300 ease-out",
+              isScrolled
+                ? "w-[7.25rem] sm:w-[8.5rem] lg:w-[9.5rem] translate-y-[0.15rem]"
+                : "w-[10.75rem] sm:w-[12.5rem] lg:w-[14.25rem] translate-y-[1.85rem]",
+            )}
           />
         </Link>
 

@@ -4,10 +4,10 @@ type LogoSize = "small" | "default" | "large" | "header";
 
 const Logo = ({ className = "", size = "default" }: { className?: string; size?: LogoSize }) => {
   const sizes: Record<LogoSize, string> = {
-    small: "w-10",
-    default: "w-14",
-    large: "w-20",
-    header: "w-[6.75rem] sm:w-[7.5rem] lg:w-[8.5rem]",
+    small: "w-24",
+    default: "w-36",
+    large: "w-48",
+    header: "w-[9rem] sm:w-[10rem] lg:w-[11rem]",
   };
 
   return (
